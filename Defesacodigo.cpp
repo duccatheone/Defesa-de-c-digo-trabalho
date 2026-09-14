@@ -5,7 +5,7 @@
 int main() {
     int codigos[TAM];
     int quantidades[TAM];
-    float precios[TAM];
+    float precos[TAM];
     int total_cadastrado = 0;
     int opcao, i;
 
@@ -29,7 +29,7 @@ int main() {
                  printf("Digite a quantidade em estoque: ");
                 scanf("%d", &quantidades[i]);
                 printf("Digite o preco unitario: ");
-                scanf("%f", &precios[i]);
+                scanf("%f", &precos[i]);
             }
             total_cadastrado = 1;
             printf("\nCadastro concluido com sucesso!\n");
@@ -52,8 +52,8 @@ int main() {
                         printf("\n[PRODUTO ENCONTRADO]\n");
                         printf("Codigo: %d\n", codigos[i]);
                         printf("Quantidade: %d unidades\n", quantidades[i]);
-                        printf("Preco Unitario: R$ %.2f\n", precios[i]);
-                        printf("Valor Total em Estoque: R$ %.2f\n", quantidades[i] * precios[i]);
+                        printf("Preco Unitario: R$ %.2f\n", precos[i]);
+                        printf("Valor Total em Estoque: R$ %.2f\n", quantidades[i] * precos[i]);
                         encontrado = 1;
                         break;
                     }
@@ -73,9 +73,9 @@ int main() {
 
                 // Processamento de dados: soma total e busca do maior valor
                 for (i = 0; i < TAM; i++) {
-                    valor_total_estoque += (quantidades[i] * precios[i]);
+                    valor_total_estoque += (quantidades[i] * precos[i]);
 
-                    if (precios[i] > precios[indice_mais_caro]) {
+                    if (precos[i] > precos[indice_mais_caro]) {
                         indice_mais_caro = i;
                     }
                 }
@@ -84,7 +84,7 @@ int main() {
                 printf("Total de itens cadastrados: %d\n", TAM);
                 printf("Valor total acumulado no estoque: R$ %.2f\n", valor_total_estoque);
                 printf("Produto de maior valor unitario: Codigo %d (R$ %.2f)\n", 
-                       codigos[indice_mais_caro], precios[indice_mais_caro]);
+                       codigos[indice_mais_caro], precos[indice_mais_caro]);
             }
 
         } else if (opcao != 4) {
