@@ -4,6 +4,8 @@ Projeto desenvolvido em **linguagem C** para a disciplina de **Algoritmos e Pens
 
 O programa simula um sistema simples de gerenciamento de estoque, permitindo cadastrar produtos, buscar produtos pelo código e gerar um relatório com algumas estatísticas do estoque.
 
+Grupo: Eduardo Ducca, Marcelo Expidito, Marcelo Bento, Hemanuel, Patryck 
+
 ## 🎯 Objetivo
 
 Aplicar, na prática, os principais conteúdos estudados na disciplina:
